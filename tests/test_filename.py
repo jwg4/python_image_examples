@@ -1,14 +1,14 @@
 from unittest import TestCase
 
-from image_examples import filenames
+from image_examples import peppers, phantom
 
 
 class TestFilename(TestCase):
     def test_one_image_by_name(self):
-        value = filenames.peppers
+        value = peppers.filename
         self.assertIsNotNone(value)
         
     def test_another_image_by_name(self):
-        value = filenames.phantom
+        value = phantom.filename
         self.assertIsNotNone(value)
         
