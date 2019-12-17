@@ -3,7 +3,7 @@ from unittest import TestCase
 from image_examples import peppers, phantom
 
 
-class TestFilename(TestCase):
+class TestAliases(TestCase):
     def test_one_image_by_name(self):
         value = peppers.filename
         self.assertIsNotNone(value)
