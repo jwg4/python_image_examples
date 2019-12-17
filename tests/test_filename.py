@@ -8,3 +8,7 @@ class TestFilename(TestCase):
         value = filenames.peppers
         self.assertIsNotNone(value)
         
+    def test_another_image_by_name(self):
+        value = filenames.phantom
+        self.assertIsNotNone(value)
+        
