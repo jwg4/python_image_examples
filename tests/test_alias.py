@@ -29,3 +29,11 @@ class TestAliasesObject(TestCase):
         value = aliases.phantom.filename
         self.assertIsNotNone(value)
 
+    def test_other_main_images_by_name(self):
+        names = [
+            "fishing_boat",
+            "mandrill",
+        ]
+        for name in names:
+            value = getattr(aliases, name)
+            self.assertIsNotNone(value, "Alias %s does not exist" % (name,))
