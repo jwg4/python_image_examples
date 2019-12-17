@@ -33,7 +33,8 @@ class TestAliasesObject(TestCase):
         names = [
             "fishing_boat",
             "mandrill",
-        ]
+            "cameraman"
+          ]
         for name in names:
             value = getattr(aliases, name)
             self.assertIsNotNone(value, "Alias %s does not exist" % (name,))
