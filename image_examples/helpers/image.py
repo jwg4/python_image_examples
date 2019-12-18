@@ -14,3 +14,7 @@ class LazyImage():
     @property
     def filename(self):
         return resource_filename('image_examples', self._internal_name)
+
+    @property
+    def comment(self):
+        return "File: %s" % (self._internal_name, )

@@ -38,3 +38,9 @@ class TestAliasesObject(TestCase):
         for name in names:
             value = getattr(aliases, name)
             self.assertIsNotNone(value, "Alias %s does not exist" % (name,))
+
+
+class TestAliasMetadata(TestCase):
+    def test_metadata_dict(self):
+        data = aliases.metadata
+        self.assertIn("fishing_boat", data)
