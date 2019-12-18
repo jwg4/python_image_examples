@@ -8,3 +8,8 @@ class TestLazyImage(TestCase):
         s = "ASDF"
         image = LazyImage(s)
         self.assertIn(s, image.comment)
+
+    def test_explicit_comment(self):
+        s = "ASDF"
+        image = LazyImage("FOO", s)
+        self.assertEqual(s, image.comment)

@@ -4,8 +4,9 @@ from pkg_resources import resource_filename
 
 
 class LazyImage():
-    def __init__(self, relname):
+    def __init__(self, relname, comment=None):
         self.relname = relname
+        self._comment = comment
 
     @property
     def _internal_name(self):
@@ -17,4 +18,6 @@ class LazyImage():
 
     @property
     def comment(self):
+        if self._comment:
+            return self._comment
         return "File: %s" % (self._internal_name, )
