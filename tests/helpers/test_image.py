@@ -19,3 +19,8 @@ class TestLazyImage(TestCase):
         image = LazyImage(s)
         self.assertIsNotNone(image)
 
+    def test_get_image_filename(self):
+        s = "usc_misc/4.2.03.tiff"
+        image = LazyImage(s)
+        self.assertIsNotNone(image.filename)
+
