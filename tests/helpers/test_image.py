@@ -13,3 +13,9 @@ class TestLazyImage(TestCase):
         s = "ASDF"
         image = LazyImage("FOO", s)
         self.assertEqual(s, image.comment)
+
+    def test_get_image(self):
+        s = "usc_misc/4.2.03.tiff"
+        image = LazyImage(s)
+        self.assertIsNotNone(image)
+
