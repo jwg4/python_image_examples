@@ -1,0 +1,21 @@
+language: python
+python: '3.6'
+matrix:
+  env:
+    - TOXENV: py36
+    - TOXENV: doctest
+    - TOXENV: flake8
+install:
+- pip install tox
+script:
+- tox $TOXENV
+notifications:
+  email: false
+deploy:
+  provider: pypi
+  user: jwg
+  on:
+    branch: 'master'
+  skip_existing: true
+  password:
+    secure: EoO+AtkCYTkeY+Se0ZsU/qD/NZz6E4gcdrBaFOUWlPt4OcV1dsT/djUkv8XQ4cFphQdc6Sgn9j8P+MtzU8GAeghq7S1L5A7C2GYY8fcN4gs3o5BflyK14JEg0GB3g1KcL7FYhv/M7LJmMXRglQAlOAmQuKIzJNFH0Xd9+lDNzFMAMdHeswhgG3yP+2azf8pW/7NjAqbpqLJUHkjxICjeQ8ZZ8YENQKlnORIcPy1kJiyY9RwLf79PqGDJfM0WJHtpyZvugEF3cZxQcL9ThrdK0cgjLL0BfBjtXXS2TiozwFTwtAqcBGvF6IyGQKmO7MvWS/FjmR/XIWnQySe7HKFaqrgwRfV7/Mmn8xFGT3JCjENN+JAz8Vc2inWZlbUFFirNjpWaxoLsKdTgGS8DSzoMrXVt4VyKSvsES1yFzL3A53DkqZWjT3GviW3cj3Qz/A/HhwDM840bGbvOjcySkR+YWZhGLziDDYqSZuxu/nxk2AWJh+aiuijBa+ipLwXF7YPbWoU5wgoqju3iiuCnF/DuBai8TnWmtX1FYZgQZQZb7x4Ojws1XI6UNIlytzQeJdvb2VajeN8/XAJYALBAy9wcR+ZmvcGfEWhtaRgCfNEyCoUD2VVnWeQpW/ih5MSSt4/uB+tp/ND1RTc/hPc+T7j/h353goMsJxMDxSfW2uXhkLA=
