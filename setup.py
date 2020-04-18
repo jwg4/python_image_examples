@@ -16,7 +16,7 @@ setup(
     description='Image processing examples',
     long_description=readme(),
     packages=['image_examples'],
-    package_data={'image_examples': ['data/']},
+    package_data={'image_examples': ['data']},
     zip_safe=False,
     include_package_data=True,
     platforms='any',
