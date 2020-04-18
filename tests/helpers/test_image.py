@@ -23,4 +23,3 @@ class TestLazyImage(TestCase):
         s = "usc_misc/4.2.03.tiff"
         image = LazyImage(s)
         self.assertIsNotNone(image.filename)
-

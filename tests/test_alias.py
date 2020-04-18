@@ -24,7 +24,7 @@ class TestAliasesObject(TestCase):
     def test_one_image_by_name(self):
         value = aliases.peppers.filename
         self.assertIsNotNone(value)
-        
+
     def test_another_image_by_name(self):
         value = aliases.phantom.filename
         self.assertIsNotNone(value)
@@ -34,7 +34,7 @@ class TestAliasesObject(TestCase):
             "fishing_boat",
             "mandrill",
             "cameraman"
-          ]
+        ]
         for name in names:
             value = getattr(aliases, name)
             self.assertIsNotNone(value, "Alias %s does not exist" % (name,))

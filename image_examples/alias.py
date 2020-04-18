@@ -19,5 +19,5 @@ try:
         for name, obj in members
         if isinstance(obj, LazyImage)
     }
-except:
+except Exception:
     pass
