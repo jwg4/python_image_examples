@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='Image-Examples',
-    version='0.1.0',
+    version='0.1.1',
     url='http://github.com/jwg4/python_image_examples',
     author='Jack Grahl',
     maintainer='Jack Grahl',
