@@ -4,10 +4,11 @@ from pkg_resources import resource_filename
 
 
 class LazyImage():
-    def __init__(self, relname, alias, comment=None):
+    def __init__(self, relname, alias=None, comment=None):
         self.relname = relname
         self._alias = alias
         self._comment = comment
+        self._raw = None
 
     @property
     def alias(self):
@@ -29,6 +30,12 @@ class LazyImage():
         return "File: %s" % (self._internal_name, )
 
     @property
+    def raw(self):
+        if self._raw is None:
+            with open(self.filename, 'rb') as f:
+                self._raw = f.read()
+        return self._raw
+    
+    @property
     def data(self):
-        with open(self.filename, 'rb') as f:
-            return f.read()
+        return bytearray(self.raw)

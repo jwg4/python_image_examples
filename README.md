@@ -11,5 +11,9 @@ Images can be loaded using an alias:
 >>> from image_examples import peppers
 
 The object loaded has several properties, including the filename for loading the data yourself:
->>> peppers.filename # doctest:+ELLIPSIS
+>>> peppers.filename  # doctest:+ELLIPSIS
 '...\\image_examples\\data\\usc_misc\\4.2.07.tiff'
+>>> peppers.raw  # doctest:+ELLIPSIS
+b'...'
+>>> peppers.data  # doctest:+ELLIPSIS
+bytearray(b'...')
