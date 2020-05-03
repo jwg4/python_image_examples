@@ -4,9 +4,15 @@ from pkg_resources import resource_filename
 
 
 class LazyImage():
-    def __init__(self, relname, comment=None):
+    def __init__(self, relname, alias, comment=None):
         self.relname = relname
+        self._alias = alias
         self._comment = comment
+
+    @property
+    def alias(self):
+        return self._alias
+
 
     @property
     def _internal_name(self):
