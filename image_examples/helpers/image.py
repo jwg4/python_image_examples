@@ -21,3 +21,8 @@ class LazyImage():
         if self._comment:
             return self._comment
         return "File: %s" % (self._internal_name, )
+
+    @property
+    def data(self):
+        with open(self.filename, 'rb') as f:
+            return f.read()
